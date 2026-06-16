@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HM Burger</title>
+    <!-- Google Fonts link for exact typography -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <style>
+        /* ==================== CSS STYLES START ==================== */
+        
+        /* Reset basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navbar Styles */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px 10px 20px;
+            width: 100%;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 5px;
+        }
+
+        .logo-text {
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffffff;
+        }
+
+        /* Main Hero Section */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 10% 80px 10%;
+            flex: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-content {
+            max-width: 500px;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-content p {
+            font-size: 13px;
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        /* Red Button Style */
+        .btn {
+            display: inline-block;
+            background-color: #ff2222;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 24px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 4px;
+            text-transform: lowercase;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #e01b1b;
+            transform: translateY(-2px);
+        }
+
+        /* Burger Image Styling */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-image img {
+            max-width: 120%;
+            height: auto;
+            object-fit: contain;
+            transform: translateX(10%); /* Screen se baahir nikalne k liye exact design match */
+            pointer-events: none;
+        }
+
+        /* Responsive Design for Mobile Screens */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero-section {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 40px 20px;
+            }
+
+            .hero-image img {
+                transform: translateX(0);
+                max-width: 80%;
+                margin-bottom: 30px;
+            }
+
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        /* ==================== CSS STYLES END ==================== */
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Logo Section -->
+        <div class="logo-container">
+            <!-- Red Burger SVG Icon -->
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="#ff3333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 15h12M3 11h18M3 11a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3M3 11v3a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-3M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+            </svg>
+            <div class="logo-text">HM Burger</div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">REVIEWS</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Hero Section -->
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1>Best Burgers in town</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eveniet harum suscipit sint ducimus cum modi dolorem id praesentium quam porro tenetur et aspernatur a aperiam magnam, ex architecto numquam.</p>
+            <a href="#" class="btn">check out menu</a>
+        </div>
+        
+        <!-- Burger Image Container -->
+        <div class="hero-image">
+            <!-- placeholder transparent burger image -->
+            <img src="c:\Users\DELL\Downloads\burger-removebg-preview.png" alt="Delicious Burger">
+        </div>
+    </main>
+
+</body>
+</html>
